@@ -37,22 +37,14 @@ public class MundarijaFragment extends Fragment implements MundarijaAdapter.Item
 
     private void init() {
         List<String> data = new ArrayList<>();
-        data.add("SO’Z BOSHI ");
-        data.add("Kompyuter lingvistikasi fanining mazmun-mohiyati");
-        data.add("Mantiq, grammatika va algoritm");
-        data.add("Aksiomatik nazariya – tilni formal tavsiflash asosi");
-        data.add("Kompyuter lingvistikasida modellashtirish va analogiya metodlari");
-        data.add("Formal grammatika nazariyasi ");
-        data.add("Kompyuter lingvistikasida matematik statistika va kvantitativ metod ");
-        data.add("Kompyuter lingvistikasi tarixi va zamonaviy holati. Kompyuter lingvistikasi bo’yicha tadqiqotlar");
-        data.add("Kompyuter lingvistikasida avtomatik tarjima yo’nalishi ");
-        data.add("Kompyuter leksikografiyasi ");
-        data.add("Til o’rgatish jarayonini avtomatlashtirish ");
-        data.add("Kompyuter lingvistikasida avtomatik tahrir, informatsion qidiruv tizimlari  va gipertekst texnologiyasi ");
-        data.add("Kompyuter analizi va sintezi. Ingliz tilidagi gaplarni o’zbek tiliga tarjima qilish algoritmi");
-        data.add("Kompyuter lingvistikasi fanining rivojlanish istiqbollari ");
-        data.add("Foydalanilgan adabiyotlar ro’yxati ");
-        data.add("Kompyuter lingvistikasi terminlari lug’ati (glossariy) ");
+        data.add("Kompyuter grafikasi haqida tushuncha");
+        data.add("Kompyuter grafikasida ranglarning sxemalari");
+        data.add("Kompyuter grafikasining fayllar formatlari");
+        data.add("Grafik axborotlar bilan ishlash texnologiyasi");
+        data.add("CorelDRAW Graphics Suite X3 dasturiy paketi");
+        data.add("Adobe Photoshop dasturiga kirish");
+        data.add("Adobe Photoshop CS5 dasturida ranglar va qatlamlar");
+        data.add("Autodesk 3ds Max 2009 dasturiga kirish");
 
         recyclerView = root.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(mContext));
@@ -73,54 +65,30 @@ public class MundarijaFragment extends Fragment implements MundarijaAdapter.Item
 
         switch (position) {
             case 0:
-                MainActivity.defaultPage = 3;
+                MainActivity.defaultPage = 5;
                 break;
             case 1:
-                MainActivity.defaultPage = 4;
+                MainActivity.defaultPage = 14;
                 break;
             case 2:
-                MainActivity.defaultPage = 9;
+                MainActivity.defaultPage = 28;
                 break;
             case 3:
-                MainActivity.defaultPage = 21;
+                MainActivity.defaultPage = 36;
                 break;
             case 4:
-                MainActivity.defaultPage = 26;
+                MainActivity.defaultPage = 49;
                 break;
             case 5:
-                MainActivity.defaultPage = 34;
+                MainActivity.defaultPage = 99;
                 break;
             case 6:
-                MainActivity.defaultPage = 44;
+                MainActivity.defaultPage = 113;
                 break;
             case 7:
-                MainActivity.defaultPage = 53;
+                MainActivity.defaultPage = 139;
                 break;
-            case 8:
-                MainActivity.defaultPage = 66;
-                break;
-            case 9:
-                MainActivity.defaultPage = 79;
-                break;
-            case 10:
-                MainActivity.defaultPage = 86;
-                break;
-            case 11:
-                MainActivity.defaultPage = 91;
-                break;
-            case 12:
-                MainActivity.defaultPage = 105;
-                break;
-            case 13:
-                MainActivity.defaultPage = 116;
-                break;
-            case 14:
-                MainActivity.defaultPage = 131;
-                break;
-            case 15:
-                MainActivity.defaultPage = 136;
 
-                break;
         }
 
         MainActivity.toolbar.setTitle("Bosh sahifa");
