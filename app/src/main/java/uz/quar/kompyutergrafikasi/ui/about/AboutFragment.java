@@ -25,6 +25,9 @@ public class AboutFragment extends Fragment {
         textView.setText(Html.fromHtml("<a href=\"mailto:"+getString(R.string.gmail)+"\">"+getString(R.string.gmail)+"</a>"));
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
+        TextView textView1 = root.findViewById(R.id.dev_gamil_text);
+        textView1.setText(Html.fromHtml("<a href=\"mailto:"+getString(R.string.dev_gmail)+"\">"+getString(R.string.dev_gmail)+"</a>"));
+        textView1.setMovementMethod(LinkMovementMethod.getInstance());
         return root;
     }
 

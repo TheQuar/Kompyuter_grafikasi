@@ -39,6 +39,8 @@ public class MundarijaFragment extends Fragment implements MundarijaAdapter.Item
 
     private void init() {
         data = new ArrayList<>();
+        data.add(new MundarijaModel("BOSH SAHIFA", 0));
+        data.add(new MundarijaModel("KIRISH", 2));
         data.add(new MundarijaModel("Kompyuter grafikasi. Kompyuter grafikasi turlari", 5));
         data.add(new MundarijaModel("Kompyuter grafikasining asosiy yo‘nalishlari", 9));
         data.add(new MundarijaModel("Rang. Ranglarning sxemalari", 14));
@@ -61,13 +63,18 @@ public class MundarijaFragment extends Fragment implements MundarijaAdapter.Item
         data.add(new MundarijaModel("Adobe Photoshop CS5 dasturining uskunalar paneli bilan tanishish", 103));
         data.add(new MundarijaModel("Grafik obyektlarda ranglar va qatlamlar bilan ishlash", 113));
         data.add(new MundarijaModel("Adobe Photoshop CS5 grafik muharririda matn va konturlar bilan ishlashda qo‘llaniladigan tushunchalar", 120));
-        data.add(new MundarijaModel("Web-sahifa uchun grafik ma’lumotlar yaratish. Animatsiya banerlarni aks ettirish", 139));
-        data.add(new MundarijaModel("Uch o‘lchamli texnologiyalar haqida tushuncha", 141));
-        data.add(new MundarijaModel("3DS MAX 2009 dasturini o‘rnatish va faollashtirish jarayoni", 150));
-        data.add(new MundarijaModel("Autodesk 3ds Max dasturi haqida tushuncha", 155));
-        data.add(new MundarijaModel("Obyektlar ustida bajariladigan operatsiyalar va buyruqlar bilan ishlash", 160));
-        data.add(new MundarijaModel("3DS-MAX dasturida turli obektlar va jarayonlarni modellashtirish", 166));
-        data.add(new MundarijaModel("Yoritgichlar va kameralarni o‘rnatish, materiallar va ular bilan ishlash", 172));
+        data.add(new MundarijaModel("Web-sahifa uchun grafik ma’lumotlar yaratish. Animatsiya banerlarni aks ettirish", 127));
+        data.add(new MundarijaModel("Uch o‘lchamli texnologiyalar haqida tushuncha", 139));
+        data.add(new MundarijaModel("3DS MAX 2009 dasturini o‘rnatish va faollashtirish jarayoni", 141));
+        data.add(new MundarijaModel("Autodesk 3ds Max dasturi haqida tushuncha", 150));
+        data.add(new MundarijaModel("Obyektlar ustida bajariladigan operatsiyalar va buyruqlar bilan ishlash", 155));
+        data.add(new MundarijaModel("3DS-MAX dasturida turli obektlar va jarayonlarni modellashtirish", 160));
+        data.add(new MundarijaModel("Yoritgichlar va kameralarni o‘rnatish, materiallar va ular bilan ishlash", 166));
+        data.add(new MundarijaModel("3DS-MAX dasturining qo‘shimcha imkoniyatlari", 172));
+        data.add(new MundarijaModel("AMALIY MASHG‘ULOTLAR BO‘YICHA KO‘RSATMA VA TAVSIYALAR", 181));
+        data.add(new MundarijaModel("NAMUNAVIY TEST SAVOLLARI", 271));
+        data.add(new MundarijaModel("GLOSSARIY", 297));
+        data.add(new MundarijaModel("FOYDALANILGAN ADABIYOTLAR", 301));
 
         recyclerView = root.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(mContext));
