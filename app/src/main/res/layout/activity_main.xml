@@ -19,13 +19,12 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@drawable/background"
             app:layout_anchorGravity="center"
-            app:titleTextColor="@color/textview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:navigationIcon="@drawable/ic_menu_light"
-            tools:ignore="MissingConstraints"
-            />
+            app:titleTextColor="@color/textview"
+            tools:ignore="MissingConstraints" />
 
         <FrameLayout
             android:id="@+id/nav_host_fragment"
@@ -47,7 +46,6 @@
         app:headerLayout="@layout/nav_header_main"
         app:itemIconTint="@color/navigation_bar_icon_tint"
         app:itemTextColor="@color/navigation_bar_text_color"
-        app:menu="@menu/activity_main_drawer"
-      />
+        app:menu="@menu/activity_main_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

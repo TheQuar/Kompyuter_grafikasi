@@ -16,18 +16,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import uz.quar.kompyutergrafikasi.R;
+import uz.quar.kompyutergrafikasi.model.MundarijaModel;
 
 public class MundarijaAdapter extends RecyclerView.Adapter<MundarijaAdapter.MyViewHolder> {
 
-    private List<String> mData;
+    private List<MundarijaModel> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
-    private Context context;
 
-    public MundarijaAdapter(Context context, List<String> mData) {
+    public MundarijaAdapter(Context context, List<MundarijaModel> mData) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = mData;
-        this.context = context;
     }
 
 
@@ -40,7 +39,7 @@ public class MundarijaAdapter extends RecyclerView.Adapter<MundarijaAdapter.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        String animal = mData.get(position);
+        String animal = mData.get(position).getTitle();
         holder.myTextView.setText(animal);
 
 
@@ -65,12 +64,6 @@ public class MundarijaAdapter extends RecyclerView.Adapter<MundarijaAdapter.MyVi
             if (mClickListener != null) mClickListener.onItemClick(v, getAdapterPosition());
 
         }
-    }
-
-
-    // convenience method for getting data at click position
-    public String getItem(int id) {
-        return mData.get(id);
     }
 
     // allows clicks events to be caught

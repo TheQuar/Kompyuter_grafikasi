@@ -17,11 +17,13 @@ import java.util.List;
 import uz.quar.kompyutergrafikasi.MainActivity;
 import uz.quar.kompyutergrafikasi.R;
 import uz.quar.kompyutergrafikasi.adapter.MundarijaAdapter;
+import uz.quar.kompyutergrafikasi.model.MundarijaModel;
 import uz.quar.kompyutergrafikasi.ui.home.HomeFragment;
 
 public class MundarijaFragment extends Fragment implements MundarijaAdapter.ItemClickListener {
     private Context mContext;
     private View root;
+    private List<MundarijaModel> data;
 
     private RecyclerView recyclerView;
 
@@ -36,36 +38,36 @@ public class MundarijaFragment extends Fragment implements MundarijaAdapter.Item
     }
 
     private void init() {
-        List<String> data = new ArrayList<>();
-        data.add("Kompyuter grafikasi. Kompyuter grafikasi turlari");
-        data.add("Kompyuter grafikasining asosiy yo‘nalishlari");
-        data.add("Rang. Ranglarning sxemalari");
-        data.add("Rang modeli");
-        data.add("Ranglarni kodlash. Palitralar");
-        data.add("Grafik fayllarning formatlari");
-        data.add("Grafik fayllarning xossalari");
-        data.add("Keng tarqalgan grafik muharrirlarning sharhi");
-        data.add("Nuqtali grafika tushunchasi");
-        data.add("Vektor grafika tushunchasi");
-        data.add("Fraktal grafika tushunchasi");
-        data.add("Tasvirlarga ishlov berish");
-        data.add("CorelDRAW Graphics Suite X3 dasturi bilan tanishuv");
-        data.add("CorelDRAW Graphics Suite X3 dasturiga kirish");
-        data.add("CorelDRAW Graphics Suite X3 dasturining o‘ziga xos xususiyatlari");
-        data.add("CorelDRAW Graphics Suite X3 dasturining imkoniyatlaridan foydalanish yo‘llari");
-        data.add("CorelDRAW Graphics Suite X3 dasturida tashqi ko‘rinish, ranglar, matnlar, effektlar bilan ishlash");
-        data.add("CorelDRAW Graphics Suite X3 dasturida maxsus effektlar va konvertatsiya");
-        data.add("Adobe Photoshop dasturining asosiy imkoniyatlari");
-        data.add("Adobe Photoshop CS5 dasturining uskunalar paneli bilan tanishish");
-        data.add("Grafik obyektlarda ranglar va qatlamlar bilan ishlash");
-        data.add("Adobe Photoshop CS5 grafik muharririda matn va konturlar bilan ishlashda qo‘llaniladigan tushunchalar");
-        data.add("Web-sahifa uchun grafik ma’lumotlar yaratish. Animatsiya banerlarni aks ettirish");
-        data.add("Uch o‘lchamli texnologiyalar haqida tushuncha");
-        data.add("3DS MAX 2009 dasturini o‘rnatish va faollashtirish jarayoni");
-        data.add("Autodesk 3ds Max dasturi haqida tushuncha");
-        data.add("Obyektlar ustida bajariladigan operatsiyalar va buyruqlar bilan ishlash");
-        data.add("3DS-MAX dasturida turli obektlar va jarayonlarni modellashtirish");
-        data.add("Yoritgichlar va kameralarni o‘rnatish, materiallar va ular bilan ishlash");
+        data = new ArrayList<>();
+        data.add(new MundarijaModel("Kompyuter grafikasi. Kompyuter grafikasi turlari", 5));
+        data.add(new MundarijaModel("Kompyuter grafikasining asosiy yo‘nalishlari", 9));
+        data.add(new MundarijaModel("Rang. Ranglarning sxemalari", 14));
+        data.add(new MundarijaModel("Rang modeli", 19));
+        data.add(new MundarijaModel("Ranglarni kodlash. Palitralar", 25));
+        data.add(new MundarijaModel("Grafik fayllarning formatlari", 28));
+        data.add(new MundarijaModel("Grafik fayllarning xossalari", 32));
+        data.add(new MundarijaModel("Keng tarqalgan grafik muharrirlarning sharhi", 36));
+        data.add(new MundarijaModel("Nuqtali grafika tushunchasi", 39));
+        data.add(new MundarijaModel("Vektor grafika tushunchasi", 40));
+        data.add(new MundarijaModel("Fraktal grafika tushunchasi", 41));
+        data.add(new MundarijaModel("Tasvirlarga ishlov berish", 43));
+        data.add(new MundarijaModel("CorelDRAW Graphics Suite X3 dasturi bilan tanishuv", 49));
+        data.add(new MundarijaModel("CorelDRAW Graphics Suite X3 dasturiga kirish", 53));
+        data.add(new MundarijaModel("CorelDRAW Graphics Suite X3 dasturining o‘ziga xos xususiyatlari", 59));
+        data.add(new MundarijaModel("CorelDRAW Graphics Suite X3 dasturining imkoniyatlaridan foydalanish yo‘llari", 66));
+        data.add(new MundarijaModel("CorelDRAW Graphics Suite X3 dasturida tashqi ko‘rinish, ranglar, matnlar, effektlar bilan ishlash", 80));
+        data.add(new MundarijaModel("CorelDRAW Graphics Suite X3 dasturida maxsus effektlar va konvertatsiya", 84));
+        data.add(new MundarijaModel("Adobe Photoshop dasturining asosiy imkoniyatlari", 99));
+        data.add(new MundarijaModel("Adobe Photoshop CS5 dasturining uskunalar paneli bilan tanishish", 103));
+        data.add(new MundarijaModel("Grafik obyektlarda ranglar va qatlamlar bilan ishlash", 113));
+        data.add(new MundarijaModel("Adobe Photoshop CS5 grafik muharririda matn va konturlar bilan ishlashda qo‘llaniladigan tushunchalar", 120));
+        data.add(new MundarijaModel("Web-sahifa uchun grafik ma’lumotlar yaratish. Animatsiya banerlarni aks ettirish", 139));
+        data.add(new MundarijaModel("Uch o‘lchamli texnologiyalar haqida tushuncha", 141));
+        data.add(new MundarijaModel("3DS MAX 2009 dasturini o‘rnatish va faollashtirish jarayoni", 150));
+        data.add(new MundarijaModel("Autodesk 3ds Max dasturi haqida tushuncha", 155));
+        data.add(new MundarijaModel("Obyektlar ustida bajariladigan operatsiyalar va buyruqlar bilan ishlash", 160));
+        data.add(new MundarijaModel("3DS-MAX dasturida turli obektlar va jarayonlarni modellashtirish", 166));
+        data.add(new MundarijaModel("Yoritgichlar va kameralarni o‘rnatish, materiallar va ular bilan ishlash", 172));
 
         recyclerView = root.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(mContext));
@@ -84,100 +86,7 @@ public class MundarijaFragment extends Fragment implements MundarijaAdapter.Item
 
     @Override
     public void onItemClick(View view, int position) {
-
-        switch (position) {
-            case 0:
-                MainActivity.defaultPage = 5;
-                break;
-            case 1:
-                MainActivity.defaultPage = 9;
-                break;
-            case 2:
-                MainActivity.defaultPage = 14;
-                break;
-            case 3:
-                MainActivity.defaultPage = 19;
-                break;
-            case 4:
-                MainActivity.defaultPage = 25;
-                break;
-            case 5:
-                MainActivity.defaultPage = 28;
-                break;
-            case 6:
-                MainActivity.defaultPage = 32;
-                break;
-            case 7:
-                MainActivity.defaultPage = 36;
-                break;
-            case 8:
-                MainActivity.defaultPage = 39;
-                break;
-            case 9:
-                MainActivity.defaultPage = 40;
-                break;
-            case 10:
-                MainActivity.defaultPage = 41;
-                break;
-            case 11:
-                MainActivity.defaultPage = 43;
-                break;
-            case 12:
-                MainActivity.defaultPage = 49;
-                break;
-            case 13:
-                MainActivity.defaultPage = 53;
-                break;
-            case 14:
-                MainActivity.defaultPage = 59;
-                break;
-            case 15:
-                MainActivity.defaultPage = 66;
-                break;
-            case 16:
-                MainActivity.defaultPage = 80;
-                break;
-            case 17:
-                MainActivity.defaultPage = 84;
-                break;
-            case 18:
-                MainActivity.defaultPage = 99;
-                break;
-            case 19:
-                MainActivity.defaultPage = 103;
-                break;
-            case 20:
-                MainActivity.defaultPage = 113;
-                break;
-            case 21:
-                MainActivity.defaultPage = 120;
-                break;
-            case 22:
-                MainActivity.defaultPage = 127;
-                break;
-            case 23:
-                MainActivity.defaultPage = 139;
-                break;
-            case 24:
-                MainActivity.defaultPage = 141;
-                break;
-            case 25:
-                MainActivity.defaultPage = 150;
-                break;
-            case 26:
-                MainActivity.defaultPage = 155;
-                break;
-            case 27:
-                MainActivity.defaultPage = 160;
-                break;
-            case 28:
-                MainActivity.defaultPage = 166;
-                break;
-            case 29:
-                MainActivity.defaultPage = 172;
-                break;
-
-        }
+        MainActivity.defaultPage = data.get(position).getPage();
 
         MainActivity.toolbar.setTitle("Bosh sahifa");
         getActivity().getSupportFragmentManager().beginTransaction().
