@@ -1,12 +1,16 @@
 package uz.quar.kompyutergrafikasi.adapter;
 
+import static uz.quar.kompyutergrafikasi.R.drawable.background;
+
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -18,11 +22,12 @@ public class MundarijaAdapter extends RecyclerView.Adapter<MundarijaAdapter.MyVi
     private List<String> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
-
+    private Context context;
 
     public MundarijaAdapter(Context context, List<String> mData) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = mData;
+        this.context = context;
     }
 
 
@@ -37,6 +42,8 @@ public class MundarijaAdapter extends RecyclerView.Adapter<MundarijaAdapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         String animal = mData.get(position);
         holder.myTextView.setText(animal);
+
+
     }
 
     @Override
@@ -46,12 +53,11 @@ public class MundarijaAdapter extends RecyclerView.Adapter<MundarijaAdapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView myTextView;
-
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             myTextView = itemView.findViewById(R.id.theme_txt);
             itemView.setOnClickListener(this);
-
+            itemView.setBackgroundColor(Color.TRANSPARENT);
         }
 
         @Override

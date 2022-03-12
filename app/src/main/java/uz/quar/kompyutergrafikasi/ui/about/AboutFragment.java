@@ -22,8 +22,8 @@ public class AboutFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_about, container, false);
 
         TextView textView = root.findViewById(R.id.about_gamil_text);
-//        textView.setText(Html.fromHtml("<a href=\"mailto:naimaxontokhtasinova@gmail.com\">naimaxontokhtasinova@gmail.com</a>"));
-//        textView.setMovementMethod(LinkMovementMethod.getInstance());
+        textView.setText(Html.fromHtml("<a href=\"mailto:"+getString(R.string.gmail)+"\">"+getString(R.string.gmail)+"</a>"));
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
 
         return root;
     }

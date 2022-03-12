@@ -40,15 +40,13 @@ public class HomeFragment extends Fragment {
                 })
                 .load();
 
-        pdfView.setScrollX(50);
 
+        pdfView.setScrollX(50);
     }
 
     public static int getPage() {
         return pdfView.getCurrentPage();
     }
-
-
 
 
 }

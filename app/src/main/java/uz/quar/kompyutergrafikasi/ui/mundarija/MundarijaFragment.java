@@ -67,18 +67,13 @@ public class MundarijaFragment extends Fragment implements MundarijaAdapter.Item
         data.add("3DS-MAX dasturida turli obektlar va jarayonlarni modellashtirish");
         data.add("Yoritgichlar va kameralarni o‘rnatish, materiallar va ular bilan ishlash");
 
-
-
-
-
-
-
         recyclerView = root.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(mContext));
 
         mundarijaAdapter = new MundarijaAdapter(mContext, data);
         mundarijaAdapter.setClickListener(this);
         recyclerView.setAdapter(mundarijaAdapter);
+
     }
 
     @Override
@@ -181,10 +176,6 @@ public class MundarijaFragment extends Fragment implements MundarijaAdapter.Item
             case 29:
                 MainActivity.defaultPage = 172;
                 break;
-
-
-
-
 
         }
 
